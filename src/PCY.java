@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 
-public class Apriori {
+public class PCY {
 
     public static double persentThreshold = 0.1;
     public static int datasize = 88000;
@@ -13,6 +13,8 @@ public class Apriori {
     public static void main(String[] args) throws Exception {
 
         long startTime = System.currentTimeMillis();
+
+        BitSet bitSet = new BitSet(88000);
 
         Set<String> uniqueItems = new HashSet<>();
         //store unique items in the dataset
@@ -23,9 +25,11 @@ public class Apriori {
         Hashtable<String,Integer> database = new Hashtable<>();
         //a collection of all items with their support #
 
+        Hashtable<String,Integer> firstBucket = new Hashtable<>();
+
         //File input/output stream
         BufferedReader in = new BufferedReader(new FileReader("data/retail.txt"));
-        BufferedWriter output = new BufferedWriter(new FileWriter("data/results.txt"));
+        BufferedWriter output = new BufferedWriter(new FileWriter("data/PCY_results.txt"));
 
         String currentLine; //current line scanned by BufferedReader
 
@@ -45,7 +49,37 @@ public class Apriori {
                     database.put(item, 1);
                 }
             }
+
+            //What PCY improved from Apriori
+            for(String item_1 : buckets){
+
+                int index = buckets.indexOf(item_1);
+
+                for(String item_2: buckets.subList(index+1,buckets.size())){
+                    //skip if 2 items are the same
+                    if(item_1.equals(item_2)){
+                        continue;
+                    }
+
+                    String items = item_1 + " "+ item_2;
+
+                    if(firstBucket.containsKey(items)){
+                        firstBucket.put(items, firstBucket.get(items) + 1);
+                    }else{
+                        firstBucket.put(items,1);
+                    }
+
+                }
+
+            }
+
         }
+
+        firstBucket.forEach((k,v) ->{
+            if(v >= support){
+                bitSet.set(hashFunction(k));
+            }
+        });
 
         //generate 1st sequences
         Hashtable<String,Integer> frequentItems = new Hashtable<>();
@@ -56,12 +90,12 @@ public class Apriori {
         });
 
         //second pass
-        Hashtable<String,Integer> secondPass = new Hashtable<>();
-
+        //Hashtable<String,Integer> secondPass = new Hashtable<>();
+        LinkedHashMap<String, Integer> frequentBucket = new LinkedHashMap<>();
         in = new BufferedReader(new FileReader("data/retail.txt"));
 
         while ((currentLine = in.readLine()) != null) {
-            //output.write(currentLine+"\n");
+
             buckets = Arrays.asList(currentLine.split(" "));
 
             for(String item_1 : buckets){
@@ -74,15 +108,19 @@ public class Apriori {
                         continue;
                     }
 
-                    //check if each of the items is a frequent item
-                    if(frequentItems.containsKey(item_1) && frequentItems.containsKey(item_2)){
-                        String key = item_1 +" "+ item_2;
-                        if(secondPass.containsKey(key)){
-                            secondPass.put(key, secondPass.get(key) + 1);
-                        }else{
-                            secondPass.put(key ,1);
-                        }
+                    String items = item_1 + " "+ item_2;
 
+                    //check if the bit vector is set OR not set
+                    if(!bitSet.get(hashFunction(items))){
+                        continue;
+                    }
+                    //check if each of the items is a frequent item
+                    if(frequentBucket.containsKey(items)){
+
+                        frequentBucket.put(items,frequentBucket.get(items) + 1);
+
+                    }else{
+                        frequentBucket.put(items,1);
                     }
 
                 }
@@ -91,7 +129,7 @@ public class Apriori {
         }
 
         Hashtable<String,Integer> frequentPairs = new Hashtable<>();
-        secondPass.forEach((k,v) ->{
+        frequentBucket.forEach((k,v) ->{
             if(v >= support){
                 frequentPairs.put(k,v);
             }
@@ -123,4 +161,9 @@ public class Apriori {
 
     }
 
+
+    public static Integer hashFunction(String key){
+        return Math.abs(key.hashCode() % datasize);
+
+    }
 }

@@ -1,0 +1,9 @@
+Item: 41 Frequencies: 14945
+Item: 32 Frequencies: 15167
+Item: 48 Frequencies: 42135
+Item: 38 Frequencies: 15596
+Item: 39 Frequencies: 50675
+Item: 39 48 Frequencies: 29142
+Item: 38 39 Frequencies: 10345
+Item: 41 48 Frequencies: 9018
+Item: 39 41 Frequencies: 11414

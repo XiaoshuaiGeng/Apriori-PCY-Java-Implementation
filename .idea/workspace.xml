@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a516f941-7f87-4767-ac6b-e51377238bf6" name="Default Changelist" comment="" />
+    <list default="true" id="a516f941-7f87-4767-ac6b-e51377238bf6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/results.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PCY.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP4250-Project1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Apriori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Apriori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,13 +23,20 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Xdg7I5J3IgI6YQ7lgbWrkNrueY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -35,10 +51,10 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="COMP4250-Project1" />
+      <option name="MAIN_CLASS_NAME" value="Apriori" />
+      <module name="Apriori_PCY_Algorithm_Java" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -46,9 +62,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PCY" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PCY" />
+      <module name="Apriori_PCY_Algorithm_Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.PCY" />
       </list>
     </recent_temporary>
   </component>
@@ -65,6 +89,7 @@
       <workItem from="1581381218851" duration="1046000" />
       <workItem from="1581382278524" duration="993000" />
       <workItem from="1581383411319" duration="12069000" />
+      <workItem from="1581623936711" duration="12242000" />
     </task>
     <servers />
   </component>
@@ -76,6 +101,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="936" y="574" key="#Main/0.0.2560.1400@0.0.2560.1400" timestamp="1581381681961" />
+    <state x="1253" y="488" key="#Notifications" timestamp="1581624115305">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1253" y="488" key="#Notifications/0.0.2560.1400@0.0.2560.1400" timestamp="1581624115305" />
     <state x="436" y="452" key="#Project_Structure" timestamp="1581382738874">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -88,39 +117,37 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="917" y="627" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1581398474551" />
-    <state width="1519" height="245" key="GridCell.Tab.0.bottom" timestamp="1581400902583">
+    <state width="1519" height="245" key="GridCell.Tab.0.bottom" timestamp="1581656621909">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1519" height="245" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1581400902583" />
-    <state width="1519" height="245" key="GridCell.Tab.0.center" timestamp="1581400902583">
+    <state width="1519" height="245" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1581656621909" />
+    <state width="1519" height="245" key="GridCell.Tab.0.center" timestamp="1581656621909">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1519" height="245" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1581400902583" />
-    <state width="1519" height="245" key="GridCell.Tab.0.left" timestamp="1581400902583">
+    <state width="1519" height="245" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1581656621909" />
+    <state width="1519" height="245" key="GridCell.Tab.0.left" timestamp="1581656621909">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1519" height="245" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1581400902583" />
-    <state width="1519" height="245" key="GridCell.Tab.0.right" timestamp="1581400902583">
+    <state width="1519" height="245" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1581656621909" />
+    <state width="1519" height="245" key="GridCell.Tab.0.right" timestamp="1581656621909">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1519" height="245" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1581400902583" />
+    <state width="1519" height="245" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1581656621909" />
     <state x="866" y="513" key="SettingsEditor" timestamp="1581400189514">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="866" y="513" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1581400189514" />
-    <state x="580" y="696" key="com.intellij.ide.util.TipDialog" timestamp="1581382285167">
+    <state x="580" y="696" key="com.intellij.ide.util.TipDialog" timestamp="1581656875201">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="580" y="696" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1581382285167" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Apriori.java</url>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="580" y="696" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1581656875201" />
+    <state x="45" y="369" width="1285" height="706" key="dock-window-1" timestamp="1581654969111">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="45" y="369" width="1285" height="706" key="dock-window-1/0.0.2560.1400@0.0.2560.1400" timestamp="1581654969111" />
+    <state x="1654" y="472" key="extract.method.dialog" timestamp="1581654487890">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1654" y="472" key="extract.method.dialog/0.0.2560.1400@0.0.2560.1400" timestamp="1581654487890" />
   </component>
 </project>
